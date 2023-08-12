@@ -1,0 +1,2 @@
+#!/bin/sh
+sed -i -e 's/kb_layout = us/kb_layout = us,us/' -e 's/kb_variant = /kb_variant = workman,/' ~/.dotfiles/wm/.config/hypr/hyprland.conf

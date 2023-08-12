@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Run gamekbd command
+gamekbd
+
+# Run command passed as first argument
+eval "$1" &
+
+# Store the process ID of the background command
+pid=$!
+
+# Wait for the command to finish
+wait "$pid"
+
+# Run normalkbd command
+normalkbd

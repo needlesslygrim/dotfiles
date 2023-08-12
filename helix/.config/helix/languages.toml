@@ -1,0 +1,33 @@
+# [[language]]
+# name = ""
+# scope = "source.*"
+# indent = { tab-width = 4, unit = "  " }
+
+[[language]]
+name = "python"
+auto-format = true
+# config = { pylsp.plugins.black.enabled = true, pylsp.plugins.ruff.enabled = true, pylsp.plugins.pycodestyle.enabled = false, pylsp.plugins.pyflakes.enabled = false, pylsp.plugins.mccabe.enabled = false}
+language-server = { command = "pylsp" }
+
+[[language]]
+name = "markdown"
+indent = { tab-width = 4, unit = "  " }
+
+
+[[language]]
+name = "typescript"
+shebangs = ["deno", "node"]
+roots = ["deno.json", "package.json", "tsconfig.json"]
+config = { enable = true, lint = true, unstable = true }
+language-server = { command = "deno", args = ["lsp"], language-id = "typescript" }
+
+[[language]]
+name = "tsx"
+shebangs = ["deno", "node"]
+roots = ["deno.json", "package.json", "tsconfig.json"]
+config = { enable = true, lint = true, unstable = true }
+language-server = { command = "deno", args = ["lsp"], language-id = "typescriptreact" }
+
+[[language]]
+name = "c"
+indent = { tab-width = 4, unit = "  " }

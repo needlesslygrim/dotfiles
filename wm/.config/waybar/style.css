@@ -1,0 +1,52 @@
+@define-color light #252525;
+@define-color bg #EEEEEE;
+
+* {
+  border: none;
+  border-radius: 10px;
+  min-height: 0;
+  margin: 0.2em 0.2em 0.2em 0.2em;
+
+}
+
+
+#waybar {
+  background: rgba(0, 0, 0, 0);
+  color: @light;
+  font-family: "Berkeley Mono", "Font Awesome 5 Pro";
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#battery,
+#clock,
+#cpu,
+#network,
+#pulseaudio,
+#temperature,
+#workspaces,
+#mpris,
+#memory,
+#language,
+#submap,
+#calendar,
+#tray {
+  border: 2px solid #CFCFCF;
+  background: @light;
+  color: @bg;
+  padding-left: 0.6em;
+  padding-right: 0.6em;
+}
+
+#workspaces button {
+  padding: 0px 5px;
+  background-color: @light;
+  color: @bg;
+}
+
+#workspaces button.active {
+  background-color: @bg;
+  color: @light;
+  border: none;
+  border-radius: 100%;
+}

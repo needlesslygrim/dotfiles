@@ -1,0 +1,93 @@
+{
+	"layer": "top",
+	"position": "top",
+	"modules-left": [
+		"wlr/workspaces",
+		"mpris"
+	],
+	"modules-center": [
+		"clock"
+	],
+	"modules-right": [
+		// "cpu",
+		// "temperature",
+		// "memory",
+		"pulseaudio",
+		"hyprland/language",
+		"network",
+		"tray"
+	],
+	"margin-top": 12,
+	"margin-bottom": 0,
+	"margin-right": 8,
+	"margin-left": 8,
+	"wlr/workspaces": {
+		"on-scroll-up": "hyprctl dispatch workspace e+1",
+		"on-scroll-down": "hyprctl dispatch workspace e-1",
+		"on-click": "activate",
+		"all-outputs": true,
+		"persistent_workspaces": {
+			"1": [],
+			"2": [],
+			"3": [],
+			"4": [],
+			"5": [],
+			"6": [],
+			"7": [],
+			"8": [],
+			"9": [],
+			"10": []
+		},
+		"format": "{icon}"
+	},
+	"clock": {
+		"format": "{:%H:%M}",
+		"format-alt": "{:%d.%m.%Y}",
+		"on-click-right": "kalendar",
+	},
+	"tray": {
+		"spacing": 5
+	},
+	"cpu": {
+		"interval": "10",
+		"on-click": "kitty -e btop",
+		"format": "cpu: {usage}%",
+	},
+	"temperature": {
+		"interval": 4,
+		"format": "temp: {temperatureC}°C",
+	},
+	"network": {
+		// "format-wifi": "WIFI: {essid}",
+		// "format-ethernet": "{ifname}: {ipaddr}",
+		// "format-linked": "{ifname}: (No IP)",
+		// "format-disconnected": "NULL",
+		// "format-alt": "{ifname}: {ipaddr}",
+		"family": "ipv4",
+	},
+	"pulseaudio": {
+		"scroll-step": 2,
+		"on-click": "pavucontrol",
+		"on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+		"format": "vol: {volume}% {icon}",
+	},
+	"mpris": {
+		"max-length": 80,
+		"escape": true,
+		// "format": "{title} - {artist}",
+		"format": "{title}",
+	},
+	"memory": {
+		"interval": 30,
+		"format": "mem: {percentage}%"
+	},
+	"hyprland/language": {
+		"format": "{}",
+		"format-en-workman": "Workman",
+		"format-en-": "QWERTY",
+		"format-en_workman": "Workman",
+		"format-en_": "QWERTY",
+		"on-click": "hyprctl switchxkblayout goudan-tech.-sk-104-keyboard next",
+		"on-click-right": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
+	}
+}
