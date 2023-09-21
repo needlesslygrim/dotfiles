@@ -36,7 +36,6 @@ source "/usr/share/fzf/completion.zsh"
 if [ "$TERM" != "linux" ]; then
     source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
   [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-  [[ ! -r /home/needlesslygrim/.opam/opam-init/init.zsh ]] || source /home/needlesslygrim/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 fi
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
         source /etc/profile.d/vte.sh
@@ -65,7 +64,6 @@ export PATH="$PATH:/home/needlesslygrim/.cargo/bin"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 
 
-# opam configuration
 
 # Aliases
 alias cc=clang
@@ -82,3 +80,8 @@ export GPG_TTY=$(tty)
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     ssh-agent -t 1h > "$XDG_RUNTIME_DIR/ssh-agent.env"
 fi
+
+export PATH="$PATH:$HOME/Github/osxcross/target/bin"
+
+# opam configuration
+[[ ! -r /home/needlesslygrim/.opam/opam-init/init.zsh ]] || source /home/needlesslygrim/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null

@@ -31,3 +31,9 @@ language-server = { command = "deno", args = ["lsp"], language-id = "typescriptr
 [[language]]
 name = "c"
 indent = { tab-width = 4, unit = "  " }
+
+[[language]]
+name = "rust"
+
+[language.config]
+checkOnSave = { command = "clippy" }
