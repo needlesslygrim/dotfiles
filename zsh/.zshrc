@@ -85,3 +85,10 @@ export PATH="$PATH:$HOME/Github/osxcross/target/bin"
 
 # opam configuration
 [[ ! -r /home/needlesslygrim/.opam/opam-init/init.zsh ]] || source /home/needlesslygrim/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+# bun completions
+[ -s "/home/needlesslygrim/.bun/_bun" ] && source "/home/needlesslygrim/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

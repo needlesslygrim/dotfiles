@@ -1,12 +1,11 @@
-@define-color light #252525;
+@define-color light #161616;
 @define-color bg #EEEEEE;
 
 * {
   border: none;
-  border-radius: 5px;
+  border-radius: 0;
   min-height: 0;
   margin: 0.2em 0.2em 0.2em 0.2em;
-
 }
 
 
@@ -38,15 +37,35 @@
   padding-right: 0.6em;
 }
 
+
 #workspaces button {
-  padding: 0px 5px;
-  background-color: @light;
+  padding: 0 5px;
+  background-color: transparent;
   color: @bg;
 }
 
+#workspaces button:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
 #workspaces button.active {
-  background-color: @bg;
-  color: @light;
+  box-shadow: inset 0 -3px @bg;
+}
+
+#workspaces button.urgent {
+  background-color: #1e1e2e;
+}
+
+button {
+  /* Use box-shadow instead of border so the text isn't offset */
+  box-shadow: inset 0 -3px transparent;
+  /* Avoid rounded borders under each button name */
   border: none;
-  border-radius: 100%;
+  border-radius: 0;
+}
+
+/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
+button:hover {
+  background: inherit;
+  box-shadow: inset 0 -3px @bg;
 }

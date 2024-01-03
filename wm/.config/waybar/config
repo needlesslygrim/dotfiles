@@ -2,7 +2,7 @@
 	"layer": "top",
 	"position": "top",
 	"modules-left": [
-		"wlr/workspaces",
+		"hyprland/workspaces",
 		"mpris"
 	],
 	"modules-center": [
@@ -21,7 +21,7 @@
 	"margin-bottom": 0,
 	"margin-right": 8,
 	"margin-left": 8,
-	"wlr/workspaces": {
+	"hyprland/workspaces": {
 		"on-scroll-up": "hyprctl dispatch workspace e+1",
 		"on-scroll-down": "hyprctl dispatch workspace e-1",
 		"on-click": "activate",
@@ -38,7 +38,7 @@
 			"9": [],
 			"10": []
 		},
-		"format": "{icon}"
+		"format": "{name}"
 	},
 	"clock": {
 		"format": "{:%H:%M}",
@@ -87,7 +87,7 @@
 		"format-en-": "QWERTY",
 		"format-en_workman": "Workman",
 		"format-en_": "QWERTY",
-		"on-click": "hyprctl switchxkblayout goudan-tech.-sk-104-keyboard next",
-		"on-click-right": "hyprctl switchxkblayout at-translated-set-2-keyboard next"
+		"on-click": "hyprctl switchxkblayout usb-hid-gmmk-pro next",
+		"on-click-right": "hyprctl switchxkblayout goudan-tech.-sk-104-keyboard next"
 	}
 }
